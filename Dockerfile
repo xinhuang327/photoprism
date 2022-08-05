@@ -1,5 +1,5 @@
 # Debian 12, Codename 'Bookworm'
-FROM photoprism/develop:220802-bookworm
+FROM photoprism/photoprism:latest
 
 ## alternative base images
 # FROM photoprism/develop:bullseye # Debian 11, Codename 'Bullseye'
@@ -11,4 +11,3 @@ WORKDIR "/go/src/github.com/photoprism/photoprism"
 
 # copy project source code to container
 COPY . .
-COPY --chown=root:root /scripts/dist/* /scripts/
