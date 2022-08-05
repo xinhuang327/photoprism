@@ -77,7 +77,8 @@
               :class="photo.classes()"
               @contextmenu.stop="onContextMenu($event, index)">
           <div class="card-background accent lighten-3"></div>
-          <div :key="photo.Hash"
+          <a v-bind:href="'file:///Volumes/Photos_at_WDRed4T/originals/'+(photo.videoFile() || photo.mainFile()).Name">
+		  <div :key="photo.Hash"
                 :alt="photo.Title"
                 :title="photo.Title"
                 class="accent lighten-2 clickable image"
@@ -154,6 +155,7 @@
               <i v-else>favorite_border</i>
             </button>
           </div>
+		  </a>
 
           <v-card-actions v-if="!isSharedView && photo.Quality < 3 && context === 'review'" class="card-details pa-0">
             <v-layout row wrap align-center>
