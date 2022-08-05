@@ -199,7 +199,7 @@
                 <button v-if="photo.Type === 'video'" :title="$gettext('Video')"
                         @[!isSharedView&&`click`].exact="openPhoto(index)">
                   <i>movie</i>
-                  {{ photo.getVideoInfo() }}
+                  <a href="file:///Volumes/Photos_at_WDRed4T/originals/2020/02/20200202_021103_E4046EED.mov">{{ photo.getVideoInfo() }}</a>
                 </button>
                 <button v-else-if="photo.Type === 'animated'" :title="$gettext('Animated')+' GIF'"
                         @[!isSharedView&&`click`].exact="openPhoto(index)">
